@@ -14,15 +14,11 @@
 
 .page-title {
     display: flex;
-
-    background-color: pink;
     flex-direction: column;
     justify-content: center;
-    gap: 0px;
-    width: 60%;
     height: 400px;
-    padding-left: 100px;
-
+    padding-left: 70px;
+    padding-right:80px;
 }
 
 .logo {
@@ -31,12 +27,18 @@
     padding-right: 10%;
 }
 
+.name {
+    font-size: 50px;
+    font-weight: 55;
+}
+
+
 .photo {
     display: flex;
     position: absolute;
     right: 30%;
-    left: 40%;
-    top: 20%
+    left: 60%;
+    top: 18%
 }
 
 .navbar {
@@ -48,7 +50,9 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 25px;
+    padding-top: 35px;
+    padding-bottom: 35px;
 
 }
 
@@ -59,7 +63,6 @@
     flex-wrap: wrap;
     gap: 10px;
 
-    /* border: solid black */
 }
 
 .project {
@@ -67,8 +70,7 @@
     height: 40%;
     width: 40%;
     flex-wrap: wrap;
-    /* border: solid black */
-
+    justify-content: space-between;
 }
 
 .project_style {
@@ -78,6 +80,8 @@
     width: 100%;
     border-radius: 8px;
     background-color: #ffcbf2;
+    font-family: "Gill Sans", sans-serif;
+    color: #6F84FF
 }
 
 .project_bar {
@@ -87,7 +91,7 @@
 
 .left {
     display: flex;
-    width: 50%; 
+    width: 45%; 
 }
 
 .right {
@@ -113,8 +117,8 @@
     height: 120px;
 }
 
-.lightblue {
-    background-color: rgb(172, 170, 255);
+.font {
+    font-family: "Gill Sans", sans-serif;
 }
 
 .forty_percent {
