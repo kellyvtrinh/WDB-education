@@ -1,34 +1,111 @@
-<!--
-    Please note that this HTML template is a starting point!
-    It is absolutely not comprehensive, and you will almost surely have to add more.
+<!-- Structure of the document: 
+Head
+Body 
+    Splash page
+        Navigation bar 
+            Logo 
+            Navigation  
+        Headline 
+
+    Portfolio
+        Project 1
+        Project 2 
+        ...
+        Project N
 -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./template.css">
-    <title>Your Personal Website: Template 1</title>
+    <title>Kelly's personal website</title>
 </head>
+
 <body>
-    <div class="splash-page">
+    <div class="splash-page forty_percent">
         <div class="navbar">
-            <div class="logo"></div>
-            <div class="nav">
-                <div class="nav-button">About</div>
-                <div class="nav-button">Portfolio</div>
-                <div class="nav-button">Contact</div>
+            
+            <div class="page-title text-font text-weight">
+                <h1 class="logo">Logo.</h1>
+                <h1>Kelly Trinh</h1>
+                <h3>deep learning enthusiast studying data science @ UC Berkeley.</h3>
+                <div class="contact-button">
+                    <button>contact me</button>
+                </div>
             </div>
+
+            <div class="nav text-font purple_4">
+                <div class="nav-button">Work</div>
+                <div class="nav-button">Play</div>
+                <div class="nav-button">About</div>
+                <div class="nav-button">Resume</div>
+            </div>
+
+            <div class="photo">
+                <image src="peach_cat_shirt.png" alt="peach cat"></image>
+            </div>
+
+            
+
+            <!-- 
+                TO-DO-LIST
+                
+                Finish the overall structure 
+                1. add the image 
+                2. finish the project section 
+                3. add the logo 
+
+                Edit the details 
+                1. edit the page title portion 
+                2. edit the navgiation bar 
+                3. edit the logo 
+                4. edit the project portion 
+
+            -->
+
         </div>
-        <div class="headline"></div>
     </div>
-    <div class="portfolio">
-        <div class="proj-col">
-            <div class="proj-name"></div>
+    <div class="portfolio sixty_percent purple_5">
+        <div class="portfolio_nav">
+            <div class="project_bar pink round_border">Project 1</div>
+            <div class="project_bar pink round_border">Project 2</div>
+            <div class="project_bar pink round_border">Project 3</div>            
         </div>
-        <div class="proj-col">
-            <div class="proj-name"></div>
+
+        <div class="project">
+            <div class="left">
+                <div class="project_img round_border">Image</div>
+            </div>
+
+            <div class="right">
+                <div class="project_name pink round_border">Project name</div>
+                <div class="project_description pink round_border">Project description</div>
+            </div>  
+        </div>
+
+        <div class="project">
+            <div class="left">
+                <div class="project_img round_border">Image</div>
+            </div>
+
+            <div class="right">
+                <div class="project_name pink round_border">Project name</div>
+                <div class="project_description pink round_border">Project description</div>
+            </div>  
+        </div>
+
+        <div class="project">
+            <div class="left">
+                <div class="project_img round_border">Image</div>
+            </div>
+
+            <div class="right">
+                <div class="project_name pink round_border">Project name</div>
+                <div class="project_description pink round_border">Project description</div>
+            </div>  
         </div>
     </div>
 </body>

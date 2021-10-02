@@ -1,0 +1,187 @@
+
+.nav {
+    display: flex;
+
+
+    justify-content: center;    
+    gap: 20px;
+    width: 40%;
+    height: 350px;
+    padding-top: 25px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.page-title {
+    display: flex;
+
+    background-color: pink;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0px;
+    width: 60%;
+    height: 400px;
+    padding-left: 100px;
+
+}
+
+.logo {
+    display: flex;
+    align-self: flex-end;
+    padding-right: 10%;
+}
+
+.photo {
+    display: flex;
+    position: absolute;
+    right: 30%;
+    left: 40%;
+    top: 20%
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+.portfolio_nav {
+    display: flex;
+    height: 40%;
+    width: 40%;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    /* border: solid black */
+}
+
+.project {
+    display: flex;
+    height: 40%;
+    width: 40%;
+    flex-wrap: wrap;
+    /* border: solid black */
+
+}
+
+.project_bar {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+
+.left {
+    display: flex;
+    width: 50%; 
+}
+
+.right {
+    display: flex;
+    width: 50%;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.project_img {
+    display: flex;
+    width: 100%;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    height: 170px;
+    border: solid #ffcbf2;
+
+}
+
+.project_name {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    /* border: solid black; */
+}
+
+.project_description {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    /* border: solid black; */
+}
+
+.lightblue {
+    background-color: rgb(172, 170, 255);
+}
+
+.forty_percent {
+    height: 40%;
+}
+
+.sixty_percent {
+    height: 60%;
+}
+
+/* Color palette */
+
+.pink {
+    background-color: #ffcbf2;
+}
+
+.purple_1 {
+    background-color: #f3c4fb;
+}
+
+.purple_2 {
+    background-color: #ecbcfd;
+}
+
+.purple_3 {
+    background-color: #e5b3fe;
+}
+
+.purple_4 {
+    background-color: #e2afff;
+}
+
+.purple_5 {
+    background-color: #deaaff;
+}
+
+.purple_6 {
+    background-color: #d8bbff;
+}
+
+.blue_1 {
+    background-color: #d0d1ff;
+}
+
+.blue_2 {
+    background-color: #c8e7ff;
+}
+
+.blue_3 {
+    background-color: #c0fdff;
+}
+
+.white {
+    background-color: whitesmoke;
+}
+
+/* Style */
+
+.round_border {
+    border-radius: 10px;
+}
+
