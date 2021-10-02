@@ -19,12 +19,15 @@
     height: 400px;
     padding-left: 70px;
     padding-right:80px;
+    padding-top: 0px
 }
 
 .logo {
     display: flex;
-    align-self: flex-end;
-    padding-right: 10%;
+    position: absolute;
+    font-size: 50px;
+    top: 0px;
+    right: 300px
 }
 
 .name {
@@ -37,8 +40,17 @@
     display: flex;
     position: absolute;
     right: 30%;
-    left: 60%;
+    left: 53%;
     top: 18%
+}
+
+.contact-button {
+    background-color: #c0fdff;
+    font-weight: bold;
+    border-radius: 8px;
+    height: 30px;
+    width: 100px;
+    border: none;
 }
 
 .navbar {
@@ -79,9 +91,10 @@
     align-items: center;
     width: 100%;
     border-radius: 8px;
-    background-color: #ffcbf2;
+    background-color: #ffdbf6;
     font-family: "Gill Sans", sans-serif;
-    color: #6F84FF
+    color: #9a58f0;
+    font-size: medium;
 }
 
 .project_bar {
@@ -152,7 +165,7 @@
 }
 
 .purple_5 {
-    background-color: #deaaff;
+    background-color: #bb7be2;
 }
 
 .purple_6 {
