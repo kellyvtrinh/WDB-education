@@ -143,6 +143,12 @@ The second half of the page:
     font-weight: lighter;
 }
 
+.project_style:hover {
+    background-color: #fdccf1;
+    color: #883de9;
+    font-weight: normal;
+}
+
 /* The left side of the project section with the image. */
 
 .left {
