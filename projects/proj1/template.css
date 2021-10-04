@@ -21,10 +21,20 @@ The first half of the page:
     width: 40%;
     height: 350px;
     padding-top: 25px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
     font-weight: lighter;
 }
+
+
+.nav-button:hover {
+    color: rgb(189, 68, 88);
+    font-weight: normal;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    
+}
+
 
 /* Self-introduction and contact section. */
 
