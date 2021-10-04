@@ -1,8 +1,21 @@
 
+
+/* 
+The first half of the page: 
+- navigation bar
+- self-introduction
+- contact button 
+*/
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* Navigation bar: work, play, about, resume. */
 .nav {
     display: flex;
-
-
     justify-content: center;    
     gap: 20px;
     width: 40%;
@@ -11,6 +24,8 @@
     padding-left: 15px;
     padding-right: 15px;
 }
+
+/* Self-introduction and contact section. */
 
 .page-title {
     display: flex;
@@ -22,6 +37,8 @@
     padding-top: 0px
 }
 
+/* Logo */
+
 .logo {
     display: flex;
     position: absolute;
@@ -30,11 +47,14 @@
     right: 300px
 }
 
+/* My name */
+
 .name {
     font-size: 50px;
     font-weight: 55;
 }
 
+/* My photo */
 
 .photo {
     display: flex;
@@ -43,6 +63,8 @@
     left: 53%;
     top: 18%
 }
+
+/* Contact button */
 
 .contact-button {
     background-color: #c0fdff;
@@ -53,10 +75,11 @@
     border: none;
 }
 
-.navbar {
-    display: flex;
-    justify-content: space-between;
-}
+/* 
+The second half of the page: 
+- project navigation bar
+- project section
+*/
 
 .portfolio {
     display: flex;
@@ -68,6 +91,8 @@
 
 }
 
+/* Project navigation bar: project 1, 2, 3 */
+
 .portfolio_nav {
     display: flex;
     height: 40%;
@@ -77,6 +102,14 @@
 
 }
 
+/* Each bar within the project navigation bar. */ 
+.project_bar {
+    display: flex;
+    height: 50px;
+}
+
+/* Project section: image, name, and description */
+
 .project {
     display: flex;
     height: 40%;
@@ -84,6 +117,8 @@
     flex-wrap: wrap;
     justify-content: space-between;
 }
+
+/* Styling the project sections. */
 
 .project_style {
     display: flex;
@@ -97,15 +132,25 @@
     font-size: medium;
 }
 
-.project_bar {
-    display: flex;
-    height: 50px;
-}
+/* The left side of the project section with the image. */
 
 .left {
     display: flex;
     width: 45%; 
 }
+
+/* Image within the project section. */
+.project_img {
+    display: flex;
+    height: 60px;
+    height: 170px;
+}
+
+
+/* 
+The right side of the project section with 
+the project name and description. 
+*/
 
 .right {
     display: flex;
@@ -114,21 +159,33 @@
     gap: 8px;
 }
 
-.project_img {
-    display: flex;
-    height: 60px;
-    height: 170px;
-}
+/* Project name */
 
 .project_name {
     display: flex;
     height: 40px;
 }
 
+/* Project description */
+
 .project_description {
     display: flex;
     height: 120px;
 }
+
+
+/* Color palette */
+
+.purple_4 {
+    background-color: #e2afff;
+}
+
+.purple_5 {
+    background-color: #bb7be2;
+}
+
+
+/* Style */
 
 .font {
     font-family: "Gill Sans", sans-serif;
@@ -141,56 +198,3 @@
 .sixty_percent {
     height: 60%;
 }
-
-/* Color palette */
-
-.pink {
-    background-color: #ffcbf2;
-}
-
-.purple_1 {
-    background-color: #f3c4fb;
-}
-
-.purple_2 {
-    background-color: #ecbcfd;
-}
-
-.purple_3 {
-    background-color: #e5b3fe;
-}
-
-.purple_4 {
-    background-color: #e2afff;
-}
-
-.purple_5 {
-    background-color: #bb7be2;
-}
-
-.purple_6 {
-    background-color: #d8bbff;
-}
-
-.blue_1 {
-    background-color: #d0d1ff;
-}
-
-.blue_2 {
-    background-color: #c8e7ff;
-}
-
-.blue_3 {
-    background-color: #c0fdff;
-}
-
-.white {
-    background-color: whitesmoke;
-}
-
-/* Style */
-
-.round_border {
-    border-radius: 10px;
-}
-
