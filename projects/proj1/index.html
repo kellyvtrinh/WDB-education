@@ -1,18 +1,3 @@
-<!-- Structure of the document: 
-Head
-Body 
-    Splash page
-        Navigation bar 
-            Logo 
-            Navigation  
-        Headline 
-
-    Portfolio
-        Project 1
-        Project 2 
-        ...
-        Project N
--->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,8 +10,17 @@ Body
 </head>
 
 <body>
+    <!-- 
+        First part of the page, including navigation bar, 
+        photo, contact button, and self-introduction.
+    -->
     <div class="splash-page forty_percent font">
+
         <div class="navbar">
+
+            <!--
+                Self-introduction and contact section.
+            -->
             
             <div class="page-title">
                 <p class="logo">Logo.</p>
@@ -35,12 +29,20 @@ Body
                 <button class="contact-button">contact me</button>
             </div>
 
+            <!-- 
+                Navigation bar with "work", "play", "about", "resume". 
+            -->
+
             <div class="nav text-font purple_4">
                 <div class="nav-button">Work</div>
                 <div class="nav-button">Play</div>
                 <div class="nav-button">About</div>
                 <div class="nav-button">Resume</div>
             </div>
+
+            <!--
+                Self-photo.
+            -->
 
             <div class="photo">
                 <image src="peach_cat_shirt.png" alt="peach cat"></image>
@@ -50,29 +52,58 @@ Body
 
             <!-- 
                 TO-DO-LIST
-                
-                Finish the overall structure 
-                1. add the image 
-                2. finish the project section 
-                3. add the logo 
 
-                Edit the details 
-                1. edit the page title portion 
-                2. edit the navgiation bar 
-                3. edit the logo 
-                4. edit the project portion 
+                Documenting my code!
+                
+                Finishing up details. 
+                1. Navigation bar font name. 
+                
+                Making websites responsive. 
+                1. Lights up, and change background color 
+                after being hovered on. 
+
 
             -->
 
         </div>
     </div>
+
+    <!-- 
+        Second part of the page, with a project navigation bar 
+        and other project sections.
+    -->
     <div class="portfolio sixty_percent purple_5">
+
+        <!-- 
+            Navigation bar for projects (i.e project 1, 2, 3)
+        -->
         <div class="portfolio_nav">
             <div class="project_bar project_style">Project 1</div>
             <div class="project_bar project_style">Project 2</div>
             <div class="project_bar project_style">Project 3</div>            
         </div>
 
+        <!-- 
+            Sections for project with image, name, and description. 
+            Each section has a left and right part.
+        -->
+
+        <!-- First project section -->
+
+        <div class="project">
+
+            <div class="left">
+                <div class="project_img project_style">Image</div>
+            </div>
+
+            <div class="right">
+                <div class="project_name project_style">Project name</div>
+                <div class="project_description project_style">Project description</div>
+            </div>  
+        </div>
+
+        <!-- Second project section -->
+
         <div class="project">
             <div class="left">
                 <div class="project_img project_style">Image</div>
@@ -84,16 +115,7 @@ Body
             </div>  
         </div>
 
-        <div class="project">
-            <div class="left">
-                <div class="project_img project_style">Image</div>
-            </div>
-
-            <div class="right">
-                <div class="project_name project_style">Project name</div>
-                <div class="project_description project_style">Project description</div>
-            </div>  
-        </div>
+        <!-- Third project section -->
 
         <div class="project">
             <div class="left">
