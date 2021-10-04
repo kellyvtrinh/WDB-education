@@ -23,6 +23,7 @@ The first half of the page:
     padding-top: 25px;
     padding-left: 15px;
     padding-right: 15px;
+    font-weight: lighter;
 }
 
 /* Self-introduction and contact section. */
@@ -51,7 +52,7 @@ The first half of the page:
 
 .name {
     font-size: 50px;
-    font-weight: 55;
+    font-weight: medium;
 }
 
 /* My photo */
@@ -129,7 +130,7 @@ The second half of the page:
     background-color: #ffdbf6;
     font-family: "Gill Sans", sans-serif;
     color: #9a58f0;
-    font-size: medium;
+    font-weight: lighter;
 }
 
 /* The left side of the project section with the image. */
@@ -171,6 +172,8 @@ the project name and description.
 .project_description {
     display: flex;
     height: 120px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 
