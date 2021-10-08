@@ -16,9 +16,6 @@ function a_plus_abs_b(a,b) {
 	return f(a, b);
 }
 
-let z = a_plus_abs_b(x,y);
-console.log(z);
-
 
 function two_of_three(x, y, z){
     /*Return a*a + b*b, where a and b are the two smallest members of the
@@ -149,7 +146,7 @@ function accumulate(merger, base, n, term){
     16
     */
     // *** YOUR CODE HERE ***
-    return ...
+    // return ...
 }
 
 
@@ -195,6 +192,23 @@ function num_eights(pos){
     NO variable assignment allowed!
     */
     // *** YOUR CODE HERE ***
+
+
+    if (Math.floor(pos / 10) === 0) {
+        if (pos === 8) {
+            return 1;
+        }
+        else {
+            return 0;
+        }
+    } else {
+        if (pos % 10 === 8) {
+            return 1 + num_eights(Math.floor(pos / 10));
+        }
+        else {
+            return num_eights(Math.floor(pos / 10));
+        }
+    }
 }
 
 function pingpong(n){
