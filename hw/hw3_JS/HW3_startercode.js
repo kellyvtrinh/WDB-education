@@ -243,7 +243,26 @@ function pingpong(n){
     Look at 61A problem set for info on the ping-pong sequence.
     */
     // *** YOUR CODE HERE ***
+
+    let helper = (idx, n, curr_num, last_num) => {
+        if (n === 1) {
+            return curr_num;
+        }
+        else if ((idx % 8 === 0) | (num_eights(idx) > 0)) { // switch direction
+            return helper(idx + 1, n - 1, last_num, curr_num);
+        }
+        else if (last_num > curr_num) { // continue descending direction
+            return helper(idx + 1, n - 1, curr_num - 1, curr_num);
+        }
+        else { // continue ascending direction
+            return helper(idx + 1, n - 1, curr_num + 1, curr_num);
+        }
+    }
+
+    return helper(1, n, 1, 0);
+
 }
+
 
 function missing_digits(n){
     /* Given a number a that is in sorted, increasing order,
