@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<head>
+    <meta title="Javascript lecture 2">
+</head>
+
+<body>
+    <h1 class="tag">Hello world!</h1>
+    <input type="text" class="in">
+    <p id="out"></p>
+
+
+</body>
+
+<!-- querySelector -->
+
+<script>
+    const tag = document.querySelector('.tag');
+    tag.style.backgroundColor = "red";
+    tag.style.color = "white";
+    tag.innerHTML = "Goodbye, world!";
+
+    const input = document.getElementsByClassName("in")[0];
+
+    input.addEventListener("keydown", function() {
+        const output = document.getElementById('out');
+        output.innerHTML += "Don't go!";
+    })
+</script>
+
+<!--
+    Four ways of writing a function.
+-->
+<script>
+
+    function func1() {
+        console.log("hello world!");
+    }
+    
+    func2 = function () {
+        console.log("function 2!")
+    }
+
+    func3 = () => {return 3};
+
+    /* Note the curved bracket is an implicit return. */
+    func4 = () => (4);
+
+    func1();
+    func2();
+    console.log(func3());
+    console.log(func4());
+
+
+</script>

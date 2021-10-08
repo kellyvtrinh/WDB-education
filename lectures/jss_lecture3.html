@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<head>
+    <meta title="Javascript lecture 3">
+</head>
+
+<body></body>
+
+<!--
+    Scope:
+        Global: any variables defined outside a function and {}
+        Local: any variables defined inside a function.
+        Lexical: nested functions. 
+        Block: variables defined in {}
+            for example 
+            if (3 > 4) {
+                var a = 1; 
+                const b = 2;
+                let c = 3;
+            }
+            a; <-- 1
+            b; <-- errors
+            c; <-- errors
+            const and let are block scoped. 
+
+    This: 
+        Used alone: refer to the global object (i.e the window object)
+        Used inside an object: refers to the object itself. 
+        Used inside an arrow function: used to setTimeout function.
+
+    Asynchronous: 
+    https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Introducing
+        
+    Synchronous model: sequentially running the models. If we have components 
+        A, B, C, and D, and they are not necessarily related and B takes a long time 
+        to run, then it'll take a long time to reach C and D.
+        
+        Asynchronous model: parts of the program run simultaneously. The program is 
+        notified when one portion is finished and gains access to that program. 
+
+        Example 
+
+        A
+        B
+        C
+        D
+
+        Part C MUST run after part B. Part B takes a long time to run. We can just run A and D as normal. 
+        If we use the synchronous model, we need to wait for B to complete before moving on. 
+        If we use the asynchronous model, we can let the program run A and D first, wait for B to finish 
+        and then run C. Using callbacks and promises are ways to have more control over the order over which 
+        portions are executed first. How this work is that A, B, C, and D are passed into the event queue. 
+        The event loop will circle around and execute the synchronous functions first, then do another pass
+        to reach the asynchronous functions. 
+
+
+        Callbacks: one approach to asynchronous model.
+        - Make part B (the long-running program) take an extra argument: a callback function.
+        - When part B finishes, the callback function is called with the result from B.
+        - setTimeout(() => console.log("Tick"), 500) <-- waits for 500 msc before 
+        executing the function. 
+        - Example: We want to fetch data from the server, process it, and then load it to the users.
+
+            fetchData(username, callback) {
+                result = fetch(username);
+                callback(result);
+            }
+
+            fetchData(username, (response) => {
+                processData(response, (processedData) => {
+                    loadData(processedData);
+                });
+            });
+
+            fetchData takes two arguments: username and a callback function. 
+            - it fetches the username first
+            - afterwards, the callback function takes the results. This callback 
+            function actually has a nested callback function (i.e it takes a response
+            argument and another callback function that loads the data).
+
+        Promises: another approach to asynchronous model.
+        - A promise is an object will produce a single value in the future. The 
+        value can resolved or unresolved. A promise has 3 states: fulfilled, 
+        rejected, or pending. To handle a promise, you use the .then method to 
+        pass in two functions, one for the promise that resolves, and one 
+        for the promise that rejects. 
+        
+        function.then().then().catch();
+
+        The then and then clauses specify which functions will follow and they 
+        can take in the outputs from the previous function; 
+        the catch clause will execute if any of the then clause fails. 
+
+    Fetch: 
+
+        This is a way to get data from an API!
+
+-->
