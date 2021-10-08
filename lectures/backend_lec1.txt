@@ -1,0 +1,66 @@
+
+
+HTTP requests: 
+* Defines we make a request. 
+* The Internet is essentially a collection of data being sent back and forth. How do we send data back and forth?
+    * We use HTTP: hypertext transfer protocol. Your browser and the entire Internet interfaces with HTTP. 
+    * So to interact with users, search engines, other websites, we need to under HTTP requests. 
+* What is a request? 
+    * Data = payload of what we send back and forth. 
+    * The three biggest common requests are get, post, and put (also called HTTP verbs). 
+    * We want to stick to the defined guidelines to making requests to make your code clean and interpoerable. 
+* GET request (from perspective of the user): 
+    Please make a GET this data at this place (URL).
+* POST request:
+    Us sending data: please post this to this location. 
+* PUT request:
+    How we update data. Please send this data to this location to update this data. 
+* When writing a request:
+    It has an address to and address from and the message!
+    * HTTP head: may include user token to give you certain accesses
+    * HTTP body
+NOTE: A request has nothing to do with a website. Websites are by-products of requests, but requests 
+just interacts with the internet and interact with data. 
+Your terminal and your browser makes the SAME request; it's just that the browser handle the request 
+different! Try example.com on both your browser and your terminal.
+    A URL is an alias to a server because that's what your ISP says it does!
+
+NOTE on API: API can be designed however you want! So you need to document your API really really well. 
+
+HTTP responses: 
+* Only responding to requests asked: if it's successful and why; if it fails then why. 
+    There are code associated with responses. The first digit indicates that it went right/wrong. 
+    The last two digits indicates the "why" it went right/wrong. For example, 200 means request is successful.
+    400 means successful; 401 = unauthorized; 404 = not found; 500 = server error. 
+
+CURL
+* The most simple way of making a request. 
+
+https://pokeapi.co/api/v2/pokemon/ditto
+    * https:// specifies which protocol is being used 
+    * pokeapi.co = domain name, is an alias to servers 
+    * /api/v2 = usually this means the server will send data back (just pure data)
+    * there are query parameters ...
+
+JSON
+* To ensure interoperability, there's a standardize data format. If you send a request, you'd want your 
+response to be deterministic. 
+* JSON = javascript object notation - every language can use JSON as a way to store data for data transfer.
+It has NOTHING to do with javascript. JSON is a janky dictionary (with key-value pairs). It's a very flexible 
+and efficient way to exchange data because it's infinitely nestable. 
+
+
+REST:
+* REST is all about design. Smarter design leads to smarter products (i.e less work on everyone - the builders and the users).
+Everything is about for efficiency, effectiveness, and interoperability.
+REST is a design principle for HTTP. It's a promise from you to the users that you will follow these design principles 
+(i.e you will send and present data a certain way that allows for interoperability).
+* There are 6 guiding principles:
+    - Client-server: keep the backend and frontend separate; we make requests between them. 
+    - Stateless: ... :()
+    - Cacheable
+    - Layered system
+    - Code on demand 
+
+Postman:
+* How we test those request. 
