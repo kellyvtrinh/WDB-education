@@ -118,9 +118,20 @@ function product(n, term){
     >>> product(3, triple)    # 1*3 * 2*3 * 3*3
     162
 	*/
-  // *** YOUR CODE HERE ***"
-  return ...;
+  // *** YOUR CODE HERE ***
+    let helper = (running_product, n) => {
+        if (n === 1) {
+            return term(n);
+        }
+        else {
+            return term(n) * helper(term(n + 1), n - 1);
+        }
+    }
+
+    return helper(1, n);
+
 }
+
 
 
 function accumulate(merger, base, n, term){
