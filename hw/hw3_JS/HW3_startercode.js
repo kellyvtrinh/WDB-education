@@ -9,12 +9,13 @@ function a_plus_abs_b(a,b) {
     >>> a_plus_abs_b(2, -3)
     
   */
-	let f = ...;
+	var f = () => {return a + b};
 	if (b < 0) {
-		let f = ...;
+		f = () => {return a - b};
 	}
 	return f(a, b);
 }
+
 let z = a_plus_abs_b(x,y);
 console.log(z);
 
@@ -34,7 +35,8 @@ function two_of_three(x, y, z){
 
     // Hint: Consider using the Math.max or Math.min function!
     */
-    return ...;
+
+    return (x**2 + y**2 + z**2) - Math.max((x, y, z))**2;
 }
 
 function largest_factor(n){
@@ -48,7 +50,17 @@ function largest_factor(n){
     1
     */
     // *** YOUR CODE HERE ***
-    return ...;
+
+    // return largest factor 
+    // starting from 0 to n / 2
+    var largest_factor = 0;
+    for (i = Math.floor(n / 2); i > 0; i--) {
+        if ((n % i === 0) & (i > largest_factor)) {
+            largest_factor = i;
+        }
+    }
+
+    return largest_factor
 }
 
 function hailstone(n){
@@ -70,8 +82,25 @@ function hailstone(n){
 		Can be solved recursively or iteratively!
 	*/
 	// *** YOUR CODE HERE ***
-	return ...;
+    
+    let helper = (value, len) => {
+        console.log(value);
+        len += 1;
+        if (value === 1) {
+            return len;
+        }
+        else if (value % 2 == 0) {
+            return helper(value / 2, len);
+        }
+        else {
+            return helper(3*value + 1, len);
+        }
+    }
+
+    return helper(n, 0);
+
 }
+
 
 
 function product(n, term){
