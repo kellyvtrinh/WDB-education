@@ -157,9 +157,37 @@ function accumulate(merger, base, n, term){
     16
     */
     // *** YOUR CODE HERE ***
-    // return ...
+    let helper = (num) => {
+        if (num === 0) {
+            return base;
+        } 
+        else if (num === 1) {
+            return merger(base, term(num));
+        }
+        else {
+            return merger(term(num), helper(num - 1));
+        }
+    }
+
+    return helper(n);
+
 }
 
+// function identity(n) {
+//     return n;
+// }
+
+// function add(n1, n2) {
+//     return n1 + n2;
+// }
+
+// function square(n) {
+//     return n**2;
+// }
+
+// function mul(n1, n2) {
+//     return n1*n2;
+// }
 
 // Refer to CS 61a HW2 for details on each of the problems! 
 // https://cs61a.org/hw/hw02/
