@@ -374,12 +374,10 @@ function get_next_coin(coin){
     const coins = [1, 5, 10, 25];
     if (coins.includes(coin)) {
         let idx = coins.indexOf(coin);
-        if (idx === coins.length - 1) {return coin;}
+        if (idx === coins.length - 1) {return null;}
         else {return coins[idx + 1];}
     }
     else {return null;}
-
-
     
 }
 
@@ -396,7 +394,17 @@ function count_coins(change){
 
     No iteration allowed!
     */
-    // *** YOUR CODE HERE ***
+
+    let helper = (change, coin) => 
+    {
+        if (change === 0) {return 1;}
+        else if (change < 0) {return 0;}
+        else if (coin === null) {return 0;} 
+        else {
+            return helper(change - coin, coin) + helper(change, get_next_coin(coin));
+        }
+    }
+    return helper(change, 1);
 }
 
 
