@@ -173,17 +173,7 @@ function accumulate(merger, base, n, term){
 
 }
 
-// function identity(n) {
-//     return n;
-// }
 
-// function add(n1, n2) {
-//     return n1 + n2;
-// }
-
-// function square(n) {
-//     return n**2;
-// }
 
 // function mul(n1, n2) {
 //     return n1*n2;
@@ -209,9 +199,38 @@ function make_repeater(func, n){
     5
     */
     // Can be solved iteratively or recursively!
-    // *** YOUR CODE HERE ***
+
+
+    if (n === 0) {
+        let identity = (x) => {return x;}
+        return identity;}
+    else {
+      let helper = (x) => {
+            result = x;
+            for (i = 0; i < n; i++) {result = func(result);}
+            return result;
+        }
+      return helper;
+    
+    }
+
 }
 
+function identity(n) {
+    return n;
+}
+
+function triple(n) {
+    return n * 3;
+}
+
+function square(n) {
+    return n**2;
+}
+
+function increment(n) {
+    return n + 1;
+}
 
 function num_eights(pos){
     /* Returns the number of times 8 appears as a digit of pos.
