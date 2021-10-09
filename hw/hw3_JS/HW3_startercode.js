@@ -370,12 +370,22 @@ function get_next_coin(coin){
     25
     >>> get_next_coin(2) # Other values return None
     */
-    // *** YOUR CODE HERE ***
+
+    const coins = [1, 5, 10, 25];
+    if (coins.includes(coin)) {
+        let idx = coins.indexOf(coin);
+        if (idx === coins.length - 1) {return coin;}
+        else {return coins[idx + 1];}
+    }
+    else {return null;}
+
+
+    
 }
 
 function count_coins(change){
     /* Return the number of ways to make change using coins of value of 1, 5, 10, 25.
-    >>> count_coins(15)
+    >>> count_coins(15) 
     6
     >>> count_coins(10)
     4
