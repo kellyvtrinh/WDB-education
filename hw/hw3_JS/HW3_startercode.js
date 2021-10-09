@@ -348,7 +348,14 @@ function missing_digits(n){
 
     No iteration allowed!
     */
-    // *** YOUR CODE HERE ***
+
+    if (n < 10) {return 0;}
+    else {
+        const last_digit = n % 10;
+        const rest_digit = Math.floor(n / 10);
+        return Math.max(last_digit - (rest_digit % 10) - 1, 0) + missing_digits(rest_digit);
+    }
+   
 }
 
 
