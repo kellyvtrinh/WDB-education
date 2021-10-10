@@ -1,0 +1,71 @@
+
+1. What is the Internet?
+
+    - Originated from a government project to create a network that would survive a nuclear attack. 
+    - There's no single entity that controls the Internet; it's a combination of distributed network that 
+    communicate with each other. 
+
+2. How is information transferred? 
+
+    - Information is sent through electricity, light, and radio waves. 
+    - Information at its basic is encoded as binary information: bits of 0 and 1. 
+    - To send the information, you can bounce light through optic cables that are physically 
+    connected across oceans. You'll need to care about bandwidth, or the maximum amount of 
+    information that you can transfer over a device. We also care about latency, or how 
+    fast can a bit of information pass through a point of the wire. 
+    - Or using radio waves that encode bits into different wave frequencies (i.e wifi).
+
+3. IP addresses and DNS
+
+    - The Internet is not just a physical system, but also a design philosophy; essentially 
+    there is a set of protocols that define how information is sent and processed throughout the Internet. 
+    - All devices on the Internet have unique addresses, called IP addresses. When you send information, 
+    similar to sending mail, you need to include an address sent to and sent from.
+    - A system called DNS associates these IP addresses to the alias (i.e the URL). For example, when a 
+    device wants to receive information from www.example.com, it sends a request to a DNS server, which 
+    may communicate with other DNS server to help map the URL to IP address required. 
+    - Since this a distributed system, hackers can access the servers and perform DNS spoofing, which is 
+    changing the mapping of URLs with IP addresses, so that the URL will map to the fake IP address. 
+
+4. What does the information do when it's transferred? 
+
+    - Imagine a big object (such as a space shuttle) that needs to be transported to its launch location. 
+    The space shuttle will be disassembled, placed into packets of different trucks that take different 
+    routes to get to the same location. A team will be there to check if all the necessary packets are 
+    present, and then the space shuttle will be re-assembled at the launch location!
+    - Similarly, information (i.e image, video, or audio file) will be broken up into many information 
+    packets. Each packets take a different route to get to get to the destination. 
+    - Routers are devices that manage the traffic; it figures out the cheapest way to the destination 
+    based on politics, infrastructure, time, etc. Since there are multiple routes to get to the same 
+    destination, this redundancy can help with error-resistance. 
+    - Once the information arrives, there's a TCP which helps to check that all the information 
+    needed is delivered properly. 
+
+
+5. HTTP and HTML
+
+    - To access a webpage, the device is communicating with the server. It is sending a get request: 
+    get me the login page, get me the e-commerce section, etc. The server responds by sending 
+    HTML (the markdown code that specifies the website make-up). If there are images, photos, or 
+    audio files on the webpage, separate get requests are sent for each of those elements to the server.
+
+    - To send information to the webpage, such as to enter login information, the device is sending a 
+    post request to the server. The server will respond with sending the appropriate web page. The 
+    next time you login into the same page, cookie information will also be sent, essentially 
+    allow you to access your login page since you've logged in before. 
+
+    - Since the internet is open, to make sure secure connection between a device and a webpage, 
+    there's SSL and TLS. Essentially to connect to you, a server must send you a unique certificate.
+    This certificate is issued by certificate authorities (similar to governments issuing passports).
+    When you go on the website, you'd want to see the lock icon and the HTTPS://, which means that 
+    your device receives a good certificate.
+
+
+6. Encryption and public keys and cybersecurity
+
+    - Some common cybercrimes include 1) viruses, 2) DDoS (denial of service), and 3) phishing. 
+    - Essentially, similar to real life viruses, cybercriminals can install viruses into the user's 
+    computer, take over the computer (i.e access the files, control it remotely), and infect other computers,
+    creating bot nets. These bot nets can take down websites by overwhelming the server associated with 
+    the website by sending it billions of requests. This is called DDoS. 
+
