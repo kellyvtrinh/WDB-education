@@ -1,0 +1,119 @@
+The basic pieces 
+
+1. Node: JS interpreter (i.e translates high-level programming languages to low-level programming languages 
+aka machine code for the machine to understand) for the server. It's an open-source server-side 
+runtime environment. It allows you to write all parts of your program in JS, and preserves JS's asynchronousity 
+and event-based characteristics.
+
+2. NPM: a package manager (i.e a collection of tools that automates the process of installing, 
+upgrading, configuring, and removing computer programs for a computer's operating system in a consistent manner) for JS. 
+
+3. create-react-app: A good starter environment for running React.
+
+                import React from 'react';
+                import ReactDOM from 'react-dom';
+                import './index.css';
+                import App from './App';
+
+                ReactDOM.render(
+                <React.StrictMode>
+                    <App />
+                </React.StrictMode>,
+                document.getElementById('root')
+                );
+
+    a) ReactDOM: DOM is a standard that dictates how you access and update information and style of a document. 
+    ReactDOM provides useful tools of managing DOM elements of the webpage.
+    b) React.StrictMode: a tool for highlighting potential problems.
+    c) <App />: a custom tag 
+    d) document.getElementById('root'): We're injecting our ReactDOM-rendered element into the "root" of the page. 
+
+4. JSX: syntax extension to JS (i.e similar to a template language).
+===================================================================================================================
+
+What is React?
+    - Framework to help run JS.
+    - In React, instead of working with the DOM directly, you work with the virtual DOM. 
+    - Based on the idea of components:
+        - For example, there is a like button that's reused in multiple parts of the page. 
+
+
+===================================================================================================================
+Anatomy of React App:
+
+Getting started 
+    - Creating your first React app
+        - Run npx create-react-app whateveryounameyourfile to create the boiler plate.
+        - Boiler plate: a starting template for React. 
+        - Local host: when you started an app but it's still on your machine. 
+            run npm start to run your local host 
+        
+    - Go into the boiler plate 
+        - src folder 
+            - App.js: where your main app is at. 
+            - index.js: where we will edit 
+        - public 
+            - index.html: it imports content from index.js; you'd want to separate 
+                this index.html with the index.js so it's easier to read. You rarely 
+                need to edit this. 
+        - node_modules 
+            - dependencies that create React 
+            - usually you don't edit these 
+        - package.json: 
+            - tells you your dependencies, your versions, templates of CSS, any fonts,
+                any packages you can install 
+            - build: send something to the server 
+            - start: start building 
+            - test: create tests for your website
+            - eject: dangerous, please don't use 
+        - .gitignore:
+            - anything in gitignore will not be pushed onto git because in principle 
+            it shouldn't be changed; so it'll include node_modules.
+===================================================================================================================
+
+Introduction to State and Props
+    - Props (short for properties): used to pass data between different React components.
+        Data flow is unidirectionally, from parent to child. 
+
+                        class ParentComponent extends Component {
+                            render() { // render component from HTML into elements on the webpage
+                                return (
+                                    <ChildComponent name="First Child" /> 
+                                    // get data from parent component and assign to child component 
+                                )
+                            }
+                        }
+
+                        const ChildComponent = (props) => {
+                            return <p>{props.name}</p>;
+                        }
+
+
+    - State: React's built-in object, which allows components to maintain their own properties (i.e data).
+    Unlike props, components cannot pass data with states, but only create and manage it internally. 
+
+                        class Test extends React.Component {
+                            constructor() {
+                                this.state = {
+                                    id: 1,
+                                    name: 'test'
+                                };
+                            }
+
+                            render() { // render component from HTML into elements on the webpage
+                                return (
+                                    <div>
+                                        <p>{this.state.id}</p>
+                                        <p>{this.state.name}</p>
+                                    </div>
+                                )
+                            }
+                        }
+
+                        // updating the state
+                        this.setState({id: '2020'});
+
+                        // you can declare it at the start 
+                        const [value, setValue] = useState(props.value);
+
+
