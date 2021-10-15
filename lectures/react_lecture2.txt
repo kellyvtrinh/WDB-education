@@ -1,0 +1,20 @@
+(note: also refer to full-stack-decal/lectures/react-2/src/index.js)
+
+Props
+    - a dictionary that maintains variable
+    - allows passing data from parent component to child component 
+    - props are immutable; so you cannot change it in the child component
+
+
+Adding additional tags 
+            <button className="square" onClick={() => alert("onClick")}>
+                {props.value} 
+            </button>
+        
+        Note that for the onClick, we return a function that returns alert 
+        instead of returning alert directly because in that case, during 
+        rendering if there's no buffering, then alert would be called.
+
+States 
+
+    - 

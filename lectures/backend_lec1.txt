@@ -84,4 +84,4 @@ REST is a design principle for HTTP. It's a promise from you to the users that y
     and executing code in the form of applets or scripts. 
 
 Postman:
-* How we test those request. 
+* How we test requests and APIs. 
